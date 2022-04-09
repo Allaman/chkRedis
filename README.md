@@ -9,4 +9,4 @@ A small Go program to verify the connection to a [Redis](https://redis.io/) in-m
 
 ![](./screen.png)
 
-See my [blog post]() why I wrote chkRedis.
+See my [blog post](https://rootknecht.net/blog/redis-con/) why I wrote chkRedis.
