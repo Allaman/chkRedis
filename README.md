@@ -7,4 +7,6 @@ A small Go program to verify the connection to a [Redis](https://redis.io/) in-m
 - Executes a `PING` command to verify the connection
 - Not compatible with Redis RBAC
 
+![](./screen.png)
+
 See my [blog post]() why I wrote chkRedis.
