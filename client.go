@@ -13,9 +13,9 @@ type client struct {
 
 type clientoptions func(*client)
 
-// createClient returns a redis client
+// createDefaultClient returns a default redis client
 // redis.Options are set with functional arguments
-func createClient(opts ...clientoptions) *client {
+func createDefaultClient(opts ...clientoptions) *client {
 	c := &client{redis.NewClient(&redis.Options{})}
 	for _, opt := range opts {
 		opt(c)
@@ -55,7 +55,7 @@ func withTLS(useTLS, skipVerify bool) clientoptions {
 			}
 		}
 	} else {
-		return func(c *client) {} // no TLSConfig disables TLS
+		return func(c *client) {} // omitting TLSConfig disables TLS
 	}
 }
 

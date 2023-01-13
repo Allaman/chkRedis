@@ -16,7 +16,7 @@ func main() {
 	ctx := kong.Parse(&cli,
 		kong.Name("chkRedis"),
 		kong.Description("Test the connection to Redis"))
-	c = createClient(
+	c = createDefaultClient(
 		withAddr(cli.Addr),
 		withPassword(cli.Password),
 		withDialTimeout(cli.DialTimeout),
