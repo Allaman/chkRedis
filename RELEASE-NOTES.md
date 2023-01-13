@@ -1,6 +1,6 @@
 # Release Notes
 
-[Latest release](https://github.com/allaman/chkRedis/releases/latest))
+[Latest release](https://github.com/allaman/chkRedis/releases/latest)
 
 ## 1.0.1
 
