@@ -1,9 +1,9 @@
 module test-redis
 
-go 1.17
+go 1.19
 
 require (
-	github.com/alecthomas/kong v0.5.0
+	github.com/alecthomas/kong v0.7.1
 	github.com/go-redis/redis v6.15.9+incompatible
 )
 
