@@ -1,3 +1,5 @@
+# DEPRECATED SEE CHANGELOG
+
 # Release Notes
 
 [Latest release](https://github.com/allaman/chkRedis/releases/latest)
