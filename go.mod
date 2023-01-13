@@ -1,4 +1,4 @@
-module test-redis
+module github.com/allaman/chkRedis
 
 go 1.19
 
