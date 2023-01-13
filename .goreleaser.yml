@@ -19,7 +19,18 @@ archives:
 checksum:
   algorithm: sha256
 changelog:
+  skip: false
   sort: asc
+  use: github
+  groups:
+    - title: Features
+      regexp: '^.*?feat(\([[:word:]]+\))??!?:.+$'
+      order: 0
+    - title: "Bug fixes"
+      regexp: '^.*?fix(\([[:word:]]+\))??!?:.+$'
+      order: 1
+    - title: Others
+      order: 999
   filters:
     exclude:
       - "^docs:"
@@ -29,7 +40,3 @@ release:
   header: |
     ## {{ .Version }} ({{ .Date }})
     New {{ .Version }} release!
-  footer: |
-    ## Release Notes
-    Please read the [RELEASE_NOTES](https://github.com/allaman/chkRedis/blob/master/RELEASE-NOTES.md) which contain among other things important information for who is upgrading from previous releases.
-    ## Thanks!
