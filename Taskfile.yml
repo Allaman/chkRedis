@@ -1,0 +1,26 @@
+version: "3"
+
+tasks:
+  default:
+    silent: true
+    cmds:
+      - task -l
+
+  build:
+    desc: Build App
+    cmds:
+      - go build
+
+  upgrade-deps:
+    desc: Upgrade all dependencies
+    cmds:
+      - go get -u ./...
+
+  test:
+    desc: Start Redis and run chkRedis
+    deps:
+      - build
+    cmds:
+      - defer: docker stop chkRedis-redis && rm chkRedis
+      - docker run --rm -d -p 6379:6379 --name chkRedis-redis redis
+      - ./chkRedis -a localhost:6379

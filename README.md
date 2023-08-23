@@ -11,12 +11,4 @@ A small Go program to verify the connection to a [Redis](https://redis.io/) in-m
 
 See my [blog post](https://rootknecht.net/blog/redis-con/) why I wrote chkRedis.
 
-## Local test
-
-```sh
-docker run --rm -p 6379:6379 --name  some-redis redis
-```
-
-```sh
-go build && ./chkRedis -a localhost:6379
-```
+Check the [Taskfile](./Taskfile.yml) ([Task](https://taskfile.dev/) is required) for useful commands.
