@@ -21,6 +21,6 @@ tasks:
     deps:
       - build
     cmds:
-      - defer: docker stop chkRedis-redis && rm chkRedis
+      - defer: rm chkRedis && docker stop chkRedis-redis
       - docker run --rm -d -p 6379:6379 --name chkRedis-redis redis
       - ./chkRedis -a localhost:6379
