@@ -6,6 +6,11 @@ tasks:
     cmds:
       - task -l
 
+  vet:
+    desc: Run go vet
+    cmds:
+      - go vet
+
   build:
     desc: Build App
     cmds:
@@ -22,5 +27,6 @@ tasks:
       - build
     cmds:
       - defer: rm chkRedis && docker stop chkRedis-redis
-      - docker run --rm -d -p 6379:6379 --name chkRedis-redis redis
-      - ./chkRedis -a localhost:6379
+      - docker run --rm -d -p 6379:6379 --name chkRedis-redis redis redis-server --requirepass "password"
+      - sleep 3
+      - ./chkRedis -a localhost:6379 -p password
