@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"log/slog"
 
 	"github.com/alecthomas/kong"
 )
@@ -32,9 +33,9 @@ func main() {
 func checkConnection() error {
 	res, err := c.redisPing()
 	if err != nil {
-		log.Fatalf("ERROR: %v", err)
-	} else {
-		log.Println(res)
+		slog.Error("error pinging Redis: ", err)
+		return err
 	}
+	slog.Info(res)
 	return nil
 }

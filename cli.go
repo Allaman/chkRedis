@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log/slog"
 	"time"
 )
 
@@ -21,7 +21,7 @@ type versionCmd struct {
 }
 
 func (c *versionCmd) Run() error {
-	fmt.Println(Version)
+	slog.Info(Version)
 	return nil
 }
 
