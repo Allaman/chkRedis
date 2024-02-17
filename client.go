@@ -54,16 +54,10 @@ func withTLS(useTLS, skipVerify bool) clientoptions {
 				InsecureSkipVerify: skipVerify,
 			}
 		}
-	} else {
-		return func(c *client) {} // omitting TLSConfig disables TLS
 	}
+	return func(c *client) {} // omitting TLSConfig disables TLS
 }
 
 func (c *client) redisPing() (string, error) {
-	pong, err := c.redis.Ping().Result()
-	if err != nil {
-		return "", err
-	} else {
-		return pong, nil
-	}
+	return c.redis.Ping().Result()
 }
