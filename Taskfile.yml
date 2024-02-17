@@ -23,6 +23,7 @@ tasks:
 
   test:
     desc: Start Redis and run chkRedis
+    summary: Spin up a Redis container via Docker run and execute chkRedis with different arguments.
     deps:
       - build
     cmds:
@@ -30,3 +31,5 @@ tasks:
       - docker run --rm -d -p 6379:6379 --name chkRedis-redis redis redis-server --requirepass "password"
       - sleep 3
       - ./chkRedis -a localhost:6379 -p password
+      - ./chkRedis -a localhost:6379 -p wrongpass 2> /dev/null || { echo "The test failed as expected, which is correct."; exit 0; } && { echo "Error - The test succeeded, which is unexpected."; exit 1; }
+      - ./chkRedis -a localhost:1234 -p password 2> /dev/null || { echo "The test failed as expected, which is correct."; exit 0; } && { echo "Error - The test succeeded, which is unexpected."; exit 1; }
