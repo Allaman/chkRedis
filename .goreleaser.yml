@@ -43,4 +43,4 @@ changelog:
 release:
   name_template: "{{ .Version }}"
   footer: |
-    **Full Changelog**: https://github.com/allaman/werkzeugkasten/compare/{{ .PreviousTag }}...{{ .Tag }}
+    **Full Changelog**: https://github.com/allaman/chkRedis/compare/{{ .PreviousTag }}...{{ .Tag }}
