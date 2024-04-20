@@ -21,6 +21,7 @@ checksum:
   algorithm: sha256
 changelog:
   sort: asc
+  use: github
   groups:
     - title: Dependency updates
       regexp: '^.*?(feat|fix|chore)\(deps\)!?:.+$'
@@ -43,4 +44,3 @@ release:
   name_template: "{{ .Version }}"
   footer: |
     **Full Changelog**: https://github.com/allaman/werkzeugkasten/compare/{{ .PreviousTag }}...{{ .Tag }}
-  use: github
