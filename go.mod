@@ -1,9 +1,9 @@
 module github.com/allaman/chkRedis
 
-go 1.21
+go 1.22.1
 
 require (
-	github.com/alecthomas/kong v0.8.1
+	github.com/alecthomas/kong v0.9.0
 	github.com/go-redis/redis v6.15.9+incompatible
 )
 
