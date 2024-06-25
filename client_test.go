@@ -38,7 +38,7 @@ func Test_client_redisPing(t *testing.T) {
 		{
 			clientOptions:  []clientoptions{},
 			containerCmd:   []string{"valkey-server"},
-			containerImage: "valkey/valkey",
+			containerImage: "valkey/valkey:7.2",
 			name:           "valkey_default",
 			want:           "PONG",
 			wantErr:        false,
@@ -46,7 +46,7 @@ func Test_client_redisPing(t *testing.T) {
 		{
 			clientOptions:  []clientoptions{withPassword("secret")},
 			containerCmd:   []string{"valkey-server", "--requirepass", "secret"},
-			containerImage: "valkey/valkey",
+			containerImage: "valkey/valkey:7.2",
 			name:           "valkey_password",
 			want:           "PONG",
 			wantErr:        false,
