@@ -5,9 +5,12 @@
 ### Chore
 - Testing via testcontainers
 - Pin valkey testcontainers image
+- Remove deprecated RELEASE-NOTES.md
 
 ### Docs
 - Update README
+- Update CHANGELOG
+- Add git-cliff config
 
 ## [1.0.13] - 2024-06-01
 ### Chore
