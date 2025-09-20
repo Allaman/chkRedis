@@ -15,7 +15,7 @@ builds:
       - linux_arm64
       - windows_amd64
 archives:
-  - format: binary
+  - formats: binary
     name_template: "{{ .Binary }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
 checksum:
   algorithm: sha256
