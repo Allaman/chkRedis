@@ -1,3 +1,10 @@
+## What's Changed in 1.1.1
+* ci: Update go version by @Allaman
+* chore: add -s -w ldflags to build by @Allaman
+* docs: Update CHANGELOG by @Allaman
+
+**Full Changelog**: https://github.com/allaman/chkRedis/compare/1.1.0...1.1.1
+
 ## What's Changed in 1.1.0
 * feat: Support Redis ACL authentication by @Allaman
 * chore: Update packages by @Allaman
