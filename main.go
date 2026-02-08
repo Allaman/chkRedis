@@ -33,7 +33,7 @@ func main() {
 func checkConnection() error {
 	res, err := c.redisPing()
 	if err != nil {
-		slog.Error("cannot ping Redis: ", err)
+		slog.Error("cannot ping Redis: ", "err", err)
 		return err
 	}
 	slog.Info(res)
