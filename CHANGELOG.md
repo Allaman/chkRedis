@@ -1,5 +1,16 @@
-## What's Changed
-* docs: Use GitHub git-cliff config
+## What's Changed in 1.1.0
+* feat: Support Redis ACL authentication by @Allaman
+* chore: Update packages by @Allaman
+* chore: Add and update tests by @Allaman
+* fix: wrong arguments for slog.Error by @Allaman
+* build(deps): bump actions/checkout from 5 to 6 by @Allaman in [#16](https://github.com/allaman/chkRedis/pull/16)
+* build(deps): bump actions/checkout from 5 to 6 by @dependabot[bot]
+* ci: Fix deprecated archive.format in goreleaser by @Allaman
+* build(deps): bump actions/setup-go from 5 to 6 by @Allaman in [#15](https://github.com/allaman/chkRedis/pull/15)
+* build(deps): bump actions/setup-go from 5 to 6 by @dependabot[bot]
+* build(deps): bump actions/checkout from 4 to 5 by @Allaman in [#14](https://github.com/allaman/chkRedis/pull/14)
+* build(deps): bump actions/checkout from 4 to 5 by @dependabot[bot]
+* docs: Use GitHub git-cliff config by @Allaman
 * docs: Add git-cliff config by @Allaman
 * chore: Remove deprecated RELEASE-NOTES.md by @Allaman
 * docs: Update CHANGELOG by @Allaman
@@ -8,6 +19,8 @@
 * chore: testing via testcontainers by @Allaman
 * build(deps): bump goreleaser/goreleaser-action from 5 to 6 by @Allaman in [#13](https://github.com/allaman/chkRedis/pull/13)
 * build(deps): bump goreleaser/goreleaser-action from 5 to 6 by @dependabot[bot]
+
+**Full Changelog**: https://github.com/allaman/chkRedis/compare/1.0.13...1.1.0
 
 ## What's Changed in 1.0.13
 * chore: bump golang and kong versions by @Allaman
@@ -123,5 +136,3 @@
 
 ## What's Changed in 1.0.0
 * initial commit by @Allaman
-
-
