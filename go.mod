@@ -1,6 +1,6 @@
 module github.com/allaman/chkRedis
 
-go 1.25.7
+go 1.25.6
 
 require (
 	github.com/alecthomas/kong v1.14.0
