@@ -9,6 +9,7 @@ type CLI struct {
 	Version     versionCmd         `cmd:"" help:"Show version information"`
 	Check       checkConnectionCmd `cmd:"" default:"1" help:"Check connection to redis (default command)"`
 	Addr        string             `default:"localhost:6379" short:"a" help:"Address to connect to in the form host:port"`
+	Username    string             `default:"" short:"u" help:"Redis ACL username"`
 	Password    string             `default:"" short:"p" help:"Redis password"`
 	DialTimeout time.Duration      `default:"5s" help:"Set DialTimout"`
 	ReadTimeout time.Duration      `default:"3s" help:"Set ReadTimeout"`

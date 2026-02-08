@@ -19,6 +19,7 @@ func main() {
 		kong.Description("Test the connection to Redis"))
 	c = createDefaultClient(
 		withAddr(cli.Addr),
+		withUsername(cli.Username),
 		withPassword(cli.Password),
 		withDialTimeout(cli.DialTimeout),
 		withReadTimeout(cli.ReadTimeout),
