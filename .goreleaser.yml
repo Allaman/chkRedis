@@ -7,7 +7,7 @@ builds:
     id: chkRedis
     main: ./
     ldflags:
-      - -X main.Version={{ .Version }}
+      - -s -w -X main.Version={{ .Version }}
     targets:
       - darwin_amd64
       - darwin_arm64
