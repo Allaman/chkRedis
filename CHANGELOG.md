@@ -1,3 +1,10 @@
+## What's Changed in 1.1.2
+* chore: Pin to 1.25.6 (1.25.7 not available in action yet) by @Allaman
+* ci: Fix goreleaser config by @Allaman
+* docs: Update CHANGELOG by @Allaman
+
+**Full Changelog**: https://github.com/allaman/chkRedis/compare/1.1.1...1.1.2
+
 ## What's Changed in 1.1.1
 * ci: Update go version by @Allaman
 * chore: add -s -w ldflags to build by @Allaman
