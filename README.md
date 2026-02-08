@@ -3,7 +3,7 @@
 A small Go program to verify the connection to a [Redis](https://redis.io/) and [Valkey](https://valkey.io/) in-memory data store.
 
 - Run `./chkRedis -h` for available options and defaults
-- Tested against Redis 7.2 and valkey 7.2
+- Tested against Redis 7.4, 8.4 and valkey 7.2, 8.1
 - Executes a `PING` command to verify the connection
 - Not compatible with RBAC
 

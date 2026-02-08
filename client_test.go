@@ -10,7 +10,6 @@ import (
 )
 
 func Test_client_redisPing(t *testing.T) {
-
 	tests := []struct {
 		clientOptions  []clientoptions
 		containerCmd   []string
@@ -22,7 +21,7 @@ func Test_client_redisPing(t *testing.T) {
 		{
 			clientOptions:  []clientoptions{},
 			containerCmd:   []string{"redis-server"},
-			containerImage: "redis:7.2",
+			containerImage: "redis:7.4",
 			name:           "redis_default",
 			want:           "PONG",
 			wantErr:        false,
@@ -30,7 +29,23 @@ func Test_client_redisPing(t *testing.T) {
 		{
 			clientOptions:  []clientoptions{withPassword("secret")},
 			containerCmd:   []string{"redis-server", "--requirepass", "secret"},
-			containerImage: "redis:7.2",
+			containerImage: "redis:7.4",
+			name:           "redis_password",
+			want:           "PONG",
+			wantErr:        false,
+		},
+		{
+			clientOptions:  []clientoptions{},
+			containerCmd:   []string{"redis-server"},
+			containerImage: "redis:8.4",
+			name:           "redis_default",
+			want:           "PONG",
+			wantErr:        false,
+		},
+		{
+			clientOptions:  []clientoptions{withPassword("secret")},
+			containerCmd:   []string{"redis-server", "--requirepass", "secret"},
+			containerImage: "redis:8.4",
 			name:           "redis_password",
 			want:           "PONG",
 			wantErr:        false,
@@ -47,6 +62,22 @@ func Test_client_redisPing(t *testing.T) {
 			clientOptions:  []clientoptions{withPassword("secret")},
 			containerCmd:   []string{"valkey-server", "--requirepass", "secret"},
 			containerImage: "valkey/valkey:7.2",
+			name:           "valkey_password",
+			want:           "PONG",
+			wantErr:        false,
+		},
+		{
+			clientOptions:  []clientoptions{},
+			containerCmd:   []string{"valkey-server"},
+			containerImage: "valkey/valkey:8.1",
+			name:           "valkey_default",
+			want:           "PONG",
+			wantErr:        false,
+		},
+		{
+			clientOptions:  []clientoptions{withPassword("secret")},
+			containerCmd:   []string{"valkey-server", "--requirepass", "secret"},
+			containerImage: "valkey/valkey:8.1",
 			name:           "valkey_password",
 			want:           "PONG",
 			wantErr:        false,
