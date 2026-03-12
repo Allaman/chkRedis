@@ -15,7 +15,7 @@ tasks:
   build:
     desc: Build App
     cmds:
-      - go build
+      - CGO_ENABLED=0 go build -ldflags="-s -w -X main.Version=dev" .
 
   upgrade-deps:
     desc: Upgrade all dependencies
