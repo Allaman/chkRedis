@@ -3,7 +3,7 @@ module github.com/allaman/chkRedis
 go 1.25.6
 
 require (
-	github.com/alecthomas/kong v1.14.0
+	github.com/alecthomas/kong v1.15.0
 	github.com/redis/go-redis/v9 v9.17.3
 	github.com/testcontainers/testcontainers-go v0.31.0
 )
