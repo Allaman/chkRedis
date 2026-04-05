@@ -4,7 +4,7 @@ go 1.25.6
 
 require (
 	github.com/alecthomas/kong v1.15.0
-	github.com/redis/go-redis/v9 v9.17.3
+	github.com/redis/go-redis/v9 v9.18.0
 	github.com/testcontainers/testcontainers-go v0.41.0
 )
 
@@ -61,6 +61,7 @@ require (
 	go.opentelemetry.io/otel/metric v1.41.0 // indirect
 	go.opentelemetry.io/otel/trace v1.41.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.0.0 // indirect
+	go.uber.org/atomic v1.11.0 // indirect
 	golang.org/x/crypto v0.48.0 // indirect
 	golang.org/x/sys v0.41.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20240814211410-ddb44dafa142 // indirect
