@@ -17,6 +17,16 @@ tasks:
     cmds:
       - CGO_ENABLED=0 go build -ldflags="-s -w -X main.Version=dev" .
 
+  lint:
+    desc: Run linter
+    cmds:
+      - golangci-lint run ./...
+
+  vuln:
+    desc: Check for vulnerabilities
+    cmds:
+      - govulncheck ./...
+
   upgrade-deps:
     desc: Upgrade all dependencies
     cmds:
