@@ -4,8 +4,8 @@ go 1.25.6
 
 require (
 	github.com/alecthomas/kong v1.16.0
-	github.com/redis/go-redis/v9 v9.21.0
 	github.com/testcontainers/testcontainers-go v0.44.0
+	github.com/redis/go-redis/v9 v9.22.0
 )
 
 require (
